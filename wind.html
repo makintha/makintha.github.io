@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Wind Speed</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid nav_top">
+          <a class="navbar-brand" href="index.html">Latitude</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse bg-white justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-centre">
+              <li class="nav-item dropdown bg-white">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Plots
+                </a>
+                <ul class="dropdown-menu bg-white" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="max_temp.html">Max Temperature</a></li>
+                  <li><a class="dropdown-item" href="humid.html">Humidity</a></li>
+                  <li><a class="dropdown-item" href="cloud.html">Cloudiness</a></li>
+                  <li><a class="dropdown-item" href="wind.html">Wind Speed</a></li>
+                </ul>
+              </li>
+              <li class="nav-item bg-white">
+                <a class="nav-link active comparison" aria-current="page" href="comparison.html">Comparison</a>
+              </li>
+              <li class="nav-item bg-white">
+                <a class="nav-link active data" href="data.html">Data</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="container-fluid" id="backg">
+      <div class="container">
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-6 offset-md-1 bg-white" id="firstrow">
+                  <h2>Wind Speed</h2>
+                  <hr>
+                  <section id = "main-par">
+                      <figure>
+                          <img class="center" alt="max_temp" src="../Assets/Fig4.png" style="width:100%;height: 100%;"/>
+                      </figure>
+                      <p class="stpar">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                  </section>
+
+                </div>
+                <div class="col-md-4 offset-md-1 bg-white" id="firstrow">
+                  <h2>Visualizations</h2>
+                  <hr>
+                  <div class="disptemp">
+                    <a href="max_temp.html"><img class="img temp" src="../Assets/Fig1.png" alt="Figure 1"></a>
+                    <a href="humid.html"><img class="img temp" src="../Assets/Fig2.png" alt="Figure 2"></a>  
+                    <a href="cloud.html"><img class="img temp" src="../Assets/Fig3.png" alt="Figure 3"></a>
+                    <a href="wind.html"><img class="img  border border-info temp" src="../Assets/Fig4.png" alt="Figure 4"></a>    
+                  </div>
+                </div>
+                
+ 
+              </div>
+
+            </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
