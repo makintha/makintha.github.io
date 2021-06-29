@@ -3,90 +3,54 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Homepage</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="style1.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container-fluid nav_top">
-          <a class="navbar-brand" href="index.html">Latitude</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse bg-white justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-centre">
-              <li class="nav-item dropdown bg-white">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Plots
-                </a>
-                <ul class="dropdown-menu bg-white" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="max_temp.html">Max Temperature</a></li>
-                  <li><a class="dropdown-item" href="humid.html">Humidity</a></li>
-                  <li><a class="dropdown-item" href="cloud.html">Cloudiness</a></li>
-                  <li><a class="dropdown-item" href="wind.html">Wind Speed</a></li>
-                </ul>
-              </li>
-              <li class="nav-item bg-white">
-                <a class="nav-link active comparison" aria-current="page" href="comparison.html">Comparison</a>
-              </li>
-              <li class="nav-item bg-white">
-                <a class="nav-link active data" href="data.html">Data</a>
-              </li>
-            </ul>
-          </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <select id="selDataset" onchange="optionChanged()"></select>
         </div>
-    </nav>
-    <div class="container-fluid" id="backg">
-      <div class="container">
-          <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-6 offset-md-1 bg-white" id="firstrow">
-                  <h2>Summary : Latitude vs. X</h2>
-                  <hr>
-                  <section id = "main-par">
-                      <figure>
-                          <img id="fig1" alt="Latitude" src="../Assets/Fig1.png" style="width:40%;height: 40%;"/>
-                      </figure>
-                      <p class="stpar">
-                          The purpose of this project was to analyse how weather changes as you get closer to the equator. 
-                          To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble dataset on over 500 cities.          
-                      </p>
-                      <p class="ndpar">
-                          After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. 
-                          Factors we looked at included: temperature, cloudiness, wind speed and humidity. 
-                          This site provides the sourve data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.
-                        </p>
-                  </section>
-
-                </div>
-                <div class="col-md-4 offset-md-1 bg-white" id="firstrow">
-                  <h2>Visualizations</h2>
-                  <hr>
-                  <div class="disptemp">
-                    <a href="max_temp.html"><img class="img border border-info temp" src="../Assets/Fig1.png" alt="Figure 1"></a>
-                    <a href="humid.html"><img class="img temp" src="../Assets/Fig2.png" alt="Figure 2"></a>  
-                    <a href="cloud.html"><img class="img temp" src="../Assets/Fig3.png" alt="Figure 3"></a>
-                    <a href="wind.html"><img class="img  temp" src="../Assets/Fig4.png" alt="Figure 4"></a>    
-                  </div>
-                </div>
-                
- 
-              </div>
-
-            </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
       </div>
     </div>
   </div>
 
-
-
-    <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="./static/js/app.js"></script>
+  <!-- <script src="./static/js/bonus.js"></script> -->
+  <!-- <script src="samples.json"></script> -->
+  
 </body>
 
 </html>
